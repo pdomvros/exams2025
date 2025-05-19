@@ -5,85 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>1ο Γυμνάσιο Πυλαίας - Πρόγραμμα Εξετάσεων</title>
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f8f8f0;
-      color: #333;
-      line-height: 1.4;
-      padding: 20px;
-    }
-    .container {
-      max-width: 800px;
-      margin: auto;
-    }
-    h1, h2, h3 {
-      text-align: center;
-      margin: 10px 0;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 20px 0;
-      font-size: 0.95rem;
-    }
-    th, td {
-      border: 1px solid #ccc;
-      padding: 6px;
-      text-align: center;
-    }
-    .btn-group {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      margin: 10px 0 30px;
-    }
-    .btn {
-      flex: 1 1 30%;
-      margin: 5px;
-      padding: 10px;
-      background-color: #fff;
-      border: 1px solid #aaa;
-      border-radius: 4px;
-      text-align: center;
-      cursor: pointer;
-      font-size: 0.9rem;
-    }
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 100;
-      left: 0; top: 0;
-      width: 100%; height: 100%;
-      overflow: auto;
-      background-color: rgba(0,0,0,0.4);
-    }
-    .modal-content {
-      background-color: #fefefe;
-      margin: 10% auto;
-      padding: 20px;
-      border: 1px solid #888;
-      width: 90%;
-      max-width: 500px;
-      border-radius: 6px;
-      position: relative;
-    }
-    .close {
-      position: absolute;
-      right: 10px; top: 10px;
-      font-size: 1.2rem;
-      cursor: pointer;
-    }
-    footer {
-      font-size: 0.75rem;
-      text-align: right;
-      margin-top: 40px;
-    }
-    @media (max-width: 600px) {
-      .btn {
-        flex: 1 1 45%;
-      }
-    }
+    body { margin: 0; font-family: Arial, sans-serif; background-color: #f8f8f0; color: #333; line-height: 1.4; padding: 20px; }
+    .container { max-width: 800px; margin: auto; }
+    h1, h2, h3, h4 { text-align: center; margin: 10px 0; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95rem; }
+    th, td { border: 1px solid #ccc; padding: 6px; text-align: center; }
+    .btn-group { display: flex; flex-wrap: wrap; justify-content: space-around; margin: 10px 0 30px; }
+    .btn, .link-btn { flex: 1 1 30%; margin: 5px; padding: 10px; background-color: #fff; border: 1px solid #aaa; border-radius: 4px; text-align: center; cursor: pointer; font-size: 0.9rem; text-decoration: none; color: #333; }
+    .link-btn { background-color: #e0e0d0; }
+    .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.4); }
+    .modal-content { background-color: #fefefe; margin: 10% auto; padding: 20px; border: 1px solid #888; width: 90%; max-width: 500px; border-radius: 6px; position: relative; }
+    .close { position: absolute; right: 10px; top: 10px; font-size: 1.2rem; cursor: pointer; }
+    footer { font-size: 0.75rem; text-align: right; margin-top: 40px; }
+    @media (max-width: 600px) { .btn, .link-btn { flex: 1 1 45%; } }
   </style>
 </head>
 <body>
@@ -91,109 +25,138 @@
     <h1>1ο Γυμνάσιο Πυλαίας</h1>
     <h2>Ύλη Γραπτών εξετάσεων Ιουνίου 2026</h2>
     <h3>Πρόγραμμα Εξετάσεων</h3>
+    <table>
+      <thead>
+        <tr><th>Ημέρα/Ημ/νία</th><th>Αʼ Κύκλος</th><th>Βʼ Κύκλος</th><th>Γʼ Κύκλος</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Παρασκευή<br>30-5-2025</td><td colspan="3">ΠΑΝΕΛΛΑΔΙΚΕΣ ΕΞΕΤΑΣΕΙΣ</td></tr>
+        <tr><td>Δευτέρα<br>2-6-2025</td><td colspan="3">ΠΑΝΕΛΛΑΔΙΚΕΣ ΕΞΕΤΑΣΕΙΣ</td></tr>
+        <tr><td>Τρίτη<br>3-6-2025</td><td>Αρχαία Α‑Β</td><td>Αρχαία Γ</td><td>—</td></tr>
+        <tr><td>Τετάρτη<br>4-6-2025</td><td colspan="3">ΠΑΝΕΛΛΑΔΙΚΕΣ ΕΞΕΤΑΣΕΙΣ</td></tr>
+        <tr><td>Πέμπτη<br>5-6-2025</td><td>Φυσική Α‑Β</td><td>Βιολογία Γ</td><td>Αγγλικά Γ Γυμνασίου</td></tr>
+        <tr><td>Παρασκευή<br>6-6-2025</td><td colspan="3">ΠΑΝΕΛΛΑΔΙΚΕΣ ΕΞΕΤΑΣΕΙΣ</td></tr>
+        <tr><td>Δευτέρα<br>9-6-2025</td><td colspan="3">ΑΓΙΟΥ ΠΝΕΥΜΑΤΟΣ</td></tr>
+        <tr><td>Τρίτη<br>10-6-2025</td><td>Φυσική Γ</td><td>Ιστορία Α‑Β</td><td>Αγγλικά Β Γυμνασίου</td></tr>
+        <tr><td>Τετάρτη<br>11-6-2025</td><td>Νέα Γ</td><td>Νέα Α‑Β</td><td>—</td></tr>
+        <tr><td>Πέμπτη<br>12-6-2025</td><td>Μαθηματικά Γ</td><td>Μαθηματικά Α‑Β</td><td>Αγγλικά Α Γυμνασίου</td></tr>
+        <tr><td>Παρασκευή<br>13-6-2025</td><td>Βιολογία Α‑Β</td><td>Ιστορία Γ</td><td>—</td></tr>
+        <tr><td>Δευτέρα<br>16-6-2025</td><td colspan="3">Απόντες/ούσες</td></tr>
+      </tbody>
+    </table>
+    <p><strong>
+      Αʼ Κύκλος: 8.10-10.10 (προσέλευση 8.00)<br>
+      Βʼ Κύκλος: 10.20-12.20 (προσέλευση 10.10)<br>
+      Γʼ Κύκλος: 12.30-14.30 (προσέλευση 12.10)<br>
+      Στις τρίωρες εξετάσεις:<br>
+      Αʼ Κύκλος: 8.10-11.10 (προσέλευση 8.00)<br>
+      Βʼ Κύκλος: 11.20-14.20 (προσέλευση 11.10)
+    </strong></p>
 
-    <!-- ... (ο πίνακας εξετάσεων όπως πριν) ... -->
-
-    <!-- Κουμπιά για Α', Β', Γ' Γυμνασίου -->
+    <h3>Α' Γυμνασίου</h3>
     <div class="btn-group" data-group="A">
-      <!-- ... (τα 9 κουμπιά) ... -->
+      <div class="btn" data-subject="Αρχαία Πρωτότυπο">Αρχαία Πρωτότυπο</div>
+      <div class="btn" data-subject="Αρχαία Λογοτεχνία">Αρχαία Λογοτεχνία</div>
+      <div class="btn" data-subject="Νέα (Γλώσσα)">Νέα (Γλώσσα)</div>
+      <div class="btn" data-subject="Νέα (Λογοτεχνία)">Νέα (Λογοτεχνία)</div>
+      <div class="btn" data-subject="Ιστορία">Ιστορία</div>
+      <div class="btn" data-subject="Φυσική">Φυσική</div>
+      <div class="btn" data-subject="Βιολογία">Βιολογία</div>
+      <div class="btn" data-subject="Μαθηματικά">Μαθηματικά</div>
+      <div class="btn" data-subject="Αγγλικά">Αγγλικά</div>
     </div>
+
+    <h3>Β' Γυμνασίου</h3>
     <div class="btn-group" data-group="B">
-      <!-- ... (τα 9 κουμπιά) ... -->
+      <div class="btn" data-subject="Αρχαία Πρωτότυπο">Αρχαία Πρωτότυπο</div>
+      <div class="btn" data-subject="Αρχαία Λογοτεχνία">Αρχαία Λογοτεχνία</div>
+      <div class="btn" data-subject="Νέα (Γλώσσα)">Νέα (Γλώσσα)</div>
+      <div class="btn" data-subject="Νέα (Λογοτεχνία)">Νέα (Λογοτεχνία)</div>
+      <div class="btn" data-subject="Ιστορία">Ιστορία</div>
+      <div class="btn" data-subject="Φυσική">Φυσική</div>
+      <div class="btn" data-subject="Βιολογία">Βιολογία</div>
+      <div class="btn" data-subject="Μαθηματικά">Μαθηματικά</div>
+      <div class="btn" data-subject="Αγγλικά">Αγγλικά</div>
     </div>
+
+    <h3>Γ' Γυμνασίου</h3>
     <div class="btn-group" data-group="C">
-      <!-- ... (τα 9 κουμπιά) ... -->
+      <div class="btn" data-subject="Αρχαία Πρωτότυπο">Αρχαία Πρωτότυπο</div>
+      <div class="btn" data-subject="Αρχαία Λογοτεχνία">Αρχαία Λογοτεχνία</div>
+      <div class="btn" data-subject="Νέα (Γλώσσα)">Νέα (Γλώσσα)</div>
+      <div class="btn" data-subject="Νέα (Λογοτεχνία)">Νέα (Λογοτεχνία)</div>
+      <div class="btn" data-subject="Ιστορία">Ιστορία</div>
+      <div class="btn" data-subject="Φυσική">Φυσική</div>
+      <div class="btn" data-subject="Βιολογία">Βιολογία</div>
+      <div class="btn" data-subject="Μαθηματικά">Μαθηματικά</div>
+      <div class="btn" data-subject="Αγγλικά">Αγγλικά</div>
     </div>
 
-    <!-- Modal -->
-    <div id="modal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h3 id="modal-title"></h3>
-        <div id="modal-body"></div>
-      </div>
-    </div>
+    <p>Στον παρακάτω σύνδεσμο θα βρείτε την παρουσίαση του Διευθυντή για τις εξετάσεις:</p>
+    <a class="link-btn" href="https://pdomvros.github.io/final-exams/" target="_blank">Παρουσίαση Γραπτών Εξετάσεων</a>
 
-    <footer>
-      Δημιουργία: Παναγιώτης Δόμβρος &nbsp; Μάιος 2025
-    </footer>
+    <footer>Δημιουργία: Παναγιώτης Δόμβρος &nbsp; Μάιος 2025</footer>
+  </div>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="modal-close">×</span>
+      <h4 id="modal-title"></h4>
+      <div id="modal-body"></div>
+    </div>
   </div>
 
   <script>
     const modal = document.getElementById('modal');
     const titleEl = document.getElementById('modal-title');
-    const bodyEl  = document.getElementById('modal-body');
-
-    document.querySelectorAll('.btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const subj  = btn.getAttribute('data-subject');
-        const group = btn.closest('.btn-group').getAttribute('data-group');
-        titleEl.textContent = `Τάξη ${group} · ${subj}`;
-        
-        if (subj === 'Ιστορία' && group === 'A') {
-          bodyEl.innerHTML = `
-            <h4>Ύλη Ιστορίας Αʼ Γυμνασίου:</h4>
-            <ul>
-              <li><strong>Κεφάλαιο Βʼ: Η Εποχή του Χαλκού</strong>
-                <ul>
-                  <li>Ο Κυκλαδικός Πολιτισμός</li>
-                  <li>Ο Μινωικός Πολιτισμός</li>
-                  <li>Η θρησκεία και η τέχνη των Μινωιτών</li>
-                  <li>Ο Μυκηναϊκός κόσμος</li>
-                  <li>Η Μυκηναϊκή θρησκεία και τέχνη</li>
-                </ul>
-              </li>
-              <li><strong>Κεφάλαιο Δʼ: Αρχαϊκή Εποχή (800-479 π.Χ.)</strong>
-                <ul>
-                  <li>Αποικιακή εξάπλωση</li>
-                  <li>Η πόλη-κράτος και η εξέλιξη του πολιτεύματος</li>
-                  <li>Η Σπάρτη</li>
-                  <li>Αθήνα: Από τη Βασιλεία στην Αριστοκρατία</li>
-                  <li>Αθήνα: πορεία προς τη Δημοκρατία</li>
-                  <li>Πέρσες και Έλληνες: Δύο κόσμοι συγκρούονται</li>
-                  <li>Η οριστική απομάκρυνση της περσικής επίθεσης</li>
-                  <li>Η Τέχνη</li>
-                </ul>
-              </li>
-              <li><strong>Κεφάλαιο Εʼ: Η Ηγεμονία της Αθήνας (479-431 π.Χ.)</strong>
-                <ul>
-                  <li>Η Συμμαχία της Δήλου &ndash; όργανο της Αθηναϊκής Ηγεμονίας</li>
-                  <li>Το δημοκρατικό πολίτευμα σταθεροποιείται – Ο Περικλής</li>
-                  <li>Η λειτουργία του πολιτεύματος – Οι Λειτουργίες</li>
-                  <li>Η σύγκρουση της κοινωνίας – Η καθημερινή ζωή</li>
-                </ul>
-              </li>
-              <li><strong>Κεφάλαιο ΣΤʼ: Ηγεμονικοί Ανταγωνισμοί & Καμπή των Ελληνικών Πολεών (431-362 π.Χ.)</strong>
-                <ul>
-                  <li>Τα αίτια και οι αφορμές του Πελοποννησιακού πολέμου (μόνο: Αίτια, Αφορμές, Αποτελέσματα)</li>
-                </ul>
-              </li>
-              <li><strong>Κεφάλαιο Ζʼ: Η Ανάπτυξη της Μακεδονίας</strong>
-                <ul>
-                  <li>Το κράτος της Μακεδονίας</li>
-                  <li>Το κράτος της Μακεδονίας επεκτείνεται</li>
-                  <li>Αλέξανδρος – Η κατάκτηση της Ανατολής</li>
-                  <li>Το έργο του Αλέξανδρου</li>
-                </ul>
-              </li>
-            </ul>
-            <p><em>Εκπαιδευτικοί: Παναγιώτα Αϊνατζή, Παναγιώτης Δόμβρος, Αναστασία Σικαρίδου</em></p>
-          `;
-        } else if (subj === 'Ιστορία') {
-          bodyEl.innerHTML = `<p>Η ύλη Ιστορίας για την τάξη ${group} θα προστεθεί στο επόμενο αρχείο.</p>`;
-        } else {
-          bodyEl.innerHTML = `<p>Το υλικό για το μάθημα “${subj}” θα προστεθεί εδώ.</p>`;
-        }
-        modal.style.display = 'block';
-      });
-    });
-
-    document.querySelector('.close').addEventListener('click', () => {
-      modal.style.display = 'none';
-    });
-    window.addEventListener('click', e => {
-      if (e.target === modal) modal.style.display = 'none';
-    });
+    const bodyEl = document.getElementById('modal-body');
+    const closeBtn = document.getElementById('modal-close');
+    function setModalContent(grp, subj) {
+      const lists = {
+        'A|Αρχαία Πρωτότυπο': ['Ανάλυση περικοπών από κείμενα Αισχύλου','Μεταφράσεις'],
+        'A|Αρχαία Λογοτεχνία': ['Οδύσσεια: μετάφραση αποσπασμάτων','Σχολιασμός θεμάτων'],
+        'A|Νέα (Γλώσσα)': ['Κεφ1: Λειτουργίες γλώσσας','Κεφ2: Αναγνωστικότητα'],
+        'A|Νέα (Λογοτεχνία)': ['Αποσπάσματα παραμυθιών','Ανάλυση χαρακτήρων'],
+        'A|Ιστορία': ['Εποχή Χαλκού','Αρχαϊκή Εποχή','Ηγεμονία Αθήνας'],
+        'A|Φυσική': ['Μάζα & Όγκος','Θερμοκρασία','Πυκνότητα'],
+        'A|Μαθηματικά': ['Άλγεβρα κεφ1–2,7','Γεωμετρία κεφ1–3'],
+        'A|Αγγλικά': ['SB UNIT1–3','WB UNIT1–3','Grammar tenses'],
+        'A|Βιολογία': ['Κεφάλαια 1,2,3'],
+        'B|Αρχαία Πρωτότυπο': ['Ύλη θα προστεθεί'],
+        'B|Αρχαία Λογοτεχνία': ['Ύλη θα προστεθεί'],
+        'B|Νέα (Γλώσσα)': ['Ενότητες 1–6'],
+        'B|Νέα (Λογοτεχνία)': ['Άννα Φρανκ','Διδώ Σωτηρίου','Τσεχωφ'],
+        'B|Ιστορία': ['Ύλη θα προστεθεί'],
+        'B|Μαθηματικά': ['Άλγεβρα κεφ1–2,4','Γεωμετρία κεφ1–3'],
+        'B|Φυσική': ['Ύλη θα προστεθεί'],
+        'B|Βιολογία': ['Κεφ2,4 βιβλίο Β́ & Γ́'],
+        'B|Αγγλικά': ['SB Units1–2','Grammar'],
+        'C|Αρχαία Πρωτότυπο': ['Θέματα όπως βιβλίο'],
+        'C|Αρχαία Λογοτεχνία': ['Κείμενα εισαγωγής & επεισοδίων'],
+        'C|Νέα (Γλώσσα)': ['Ύλη θα προστεθεί'],
+        'C|Νέα (Λογοτεχνία)': ['Ύλη θα προστεθεί'],
+        'C|Ιστορία': ['Ύλη θα προστεθεί'],
+        'C|Μαθηματικά': ['Άλγεβρα κεφ1–3','Γεωμετρία κεφ1–2'],
+        'C|Φυσική': ['Ύλη θα προστεθεί'],
+        'C|Βιολογία': ['Κεφ1,5'],
+        'C|Αγγλικά': ['SB Units1–5','Conditionals']
+      };
+      const key = `${grp}|${subj}`;
+      const items = lists[key] || [];
+      if (items.length) {
+        return `<h4>Ύλη ${subj}:</h4><ul>${items.map(i=>`<li>${i}</li>`).join('')}</ul>`;
+      }
+      return `<p>Το υλικό για το μάθημα “${subj}” θα προστεθεί σύντομα.</p>`;
+    }
+    document.querySelectorAll('.btn').forEach(btn=>btn.addEventListener('click',()=>{
+      const subj=btn.dataset.subject;
+      const grp=btn.closest('.btn-group').dataset.group;
+      titleEl.textContent=`Τάξη ${grp} · ${subj}`;
+      bodyEl.innerHTML=setModalContent(grp,subj);
+      modal.style.display='block';
+    }));
+    closeBtn&&closeBtn.addEventListener('click',()=>modal.style.display='none');
+    window.addEventListener('click',e=>{ if(e.target===modal) modal.style.display='none'; });
   </script>
 </body>
 </html>
