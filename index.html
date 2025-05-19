@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>1ο Γυμνάσιο Πυλαίας - Πρόγραμμα Εξετάσεων</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f0;
+      color: #333;
+      line-height: 1.4;
+      padding: 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+    }
+    h1, h2, h3 {
+      text-align: center;
+      margin: 10px 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 0.95rem;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 6px;
+      text-align: center;
+    }
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin: 10px 0 30px;
+    }
+    .btn {
+      flex: 1 1 30%;
+      margin: 5px;
+      padding: 10px;
+      background-color: #fff;
+      border: 1px solid #aaa;
+      border-radius: 4px;
+      text-align: center;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 100;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.4);
+    }
+    .modal-content {
+      background-color: #fefefe;
+      margin: 10% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 90%;
+      max-width: 500px;
+      border-radius: 6px;
+      position: relative;
+    }
+    .close {
+      position: absolute;
+      right: 10px; top: 10px;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+    footer {
+      font-size: 0.75rem;
+      text-align: right;
+      margin-top: 40px;
+    }
+    @media (max-width: 600px) {
+      .btn {
+        flex: 1 1 45%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>1ο Γυμνάσιο Πυλαίας</h1>
+    <h2>Ύλη Γραπτών εξετάσεων Ιουνίου 2026</h2>
+    <h3>Πρόγραμμα Εξετάσεων</h3>
+
+    <!-- ... (ο πίνακας εξετάσεων όπως πριν) ... -->
+
+    <!-- Κουμπιά για Α', Β', Γ' Γυμνασίου -->
+    <div class="btn-group" data-group="A">
+      <!-- ... (τα 9 κουμπιά) ... -->
+    </div>
+    <div class="btn-group" data-group="B">
+      <!-- ... (τα 9 κουμπιά) ... -->
+    </div>
+    <div class="btn-group" data-group="C">
+      <!-- ... (τα 9 κουμπιά) ... -->
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3 id="modal-title"></h3>
+        <div id="modal-body"></div>
+      </div>
+    </div>
+
+    <footer>
+      Δημιουργία: Παναγιώτης Δόμβρος &nbsp; Μάιος 2025
+    </footer>
+  </div>
+
+  <script>
+    const modal = document.getElementById('modal');
+    const titleEl = document.getElementById('modal-title');
+    const bodyEl  = document.getElementById('modal-body');
+
+    document.querySelectorAll('.btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const subj  = btn.getAttribute('data-subject');
+        const group = btn.closest('.btn-group').getAttribute('data-group');
+        titleEl.textContent = `Τάξη ${group} · ${subj}`;
+        
+        if (subj === 'Ιστορία' && group === 'A') {
+          bodyEl.innerHTML = `
+            <h4>Ύλη Ιστορίας Αʼ Γυμνασίου:</h4>
+            <ul>
+              <li><strong>Κεφάλαιο Βʼ: Η Εποχή του Χαλκού</strong>
+                <ul>
+                  <li>Ο Κυκλαδικός Πολιτισμός</li>
+                  <li>Ο Μινωικός Πολιτισμός</li>
+                  <li>Η θρησκεία και η τέχνη των Μινωιτών</li>
+                  <li>Ο Μυκηναϊκός κόσμος</li>
+                  <li>Η Μυκηναϊκή θρησκεία και τέχνη</li>
+                </ul>
+              </li>
+              <li><strong>Κεφάλαιο Δʼ: Αρχαϊκή Εποχή (800-479 π.Χ.)</strong>
+                <ul>
+                  <li>Αποικιακή εξάπλωση</li>
+                  <li>Η πόλη-κράτος και η εξέλιξη του πολιτεύματος</li>
+                  <li>Η Σπάρτη</li>
+                  <li>Αθήνα: Από τη Βασιλεία στην Αριστοκρατία</li>
+                  <li>Αθήνα: πορεία προς τη Δημοκρατία</li>
+                  <li>Πέρσες και Έλληνες: Δύο κόσμοι συγκρούονται</li>
+                  <li>Η οριστική απομάκρυνση της περσικής επίθεσης</li>
+                  <li>Η Τέχνη</li>
+                </ul>
+              </li>
+              <li><strong>Κεφάλαιο Εʼ: Η Ηγεμονία της Αθήνας (479-431 π.Χ.)</strong>
+                <ul>
+                  <li>Η Συμμαχία της Δήλου &ndash; όργανο της Αθηναϊκής Ηγεμονίας</li>
+                  <li>Το δημοκρατικό πολίτευμα σταθεροποιείται – Ο Περικλής</li>
+                  <li>Η λειτουργία του πολιτεύματος – Οι Λειτουργίες</li>
+                  <li>Η σύγκρουση της κοινωνίας – Η καθημερινή ζωή</li>
+                </ul>
+              </li>
+              <li><strong>Κεφάλαιο ΣΤʼ: Ηγεμονικοί Ανταγωνισμοί & Καμπή των Ελληνικών Πολεών (431-362 π.Χ.)</strong>
+                <ul>
+                  <li>Τα αίτια και οι αφορμές του Πελοποννησιακού πολέμου (μόνο: Αίτια, Αφορμές, Αποτελέσματα)</li>
+                </ul>
+              </li>
+              <li><strong>Κεφάλαιο Ζʼ: Η Ανάπτυξη της Μακεδονίας</strong>
+                <ul>
+                  <li>Το κράτος της Μακεδονίας</li>
+                  <li>Το κράτος της Μακεδονίας επεκτείνεται</li>
+                  <li>Αλέξανδρος – Η κατάκτηση της Ανατολής</li>
+                  <li>Το έργο του Αλέξανδρου</li>
+                </ul>
+              </li>
+            </ul>
+            <p><em>Εκπαιδευτικοί: Παναγιώτα Αϊνατζή, Παναγιώτης Δόμβρος, Αναστασία Σικαρίδου</em></p>
+          `;
+        } else if (subj === 'Ιστορία') {
+          bodyEl.innerHTML = `<p>Η ύλη Ιστορίας για την τάξη ${group} θα προστεθεί στο επόμενο αρχείο.</p>`;
+        } else {
+          bodyEl.innerHTML = `<p>Το υλικό για το μάθημα “${subj}” θα προστεθεί εδώ.</p>`;
+        }
+        modal.style.display = 'block';
+      });
+    });
+
+    document.querySelector('.close').addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+    window.addEventListener('click', e => {
+      if (e.target === modal) modal.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
